@@ -1,0 +1,15 @@
+<h1>Angular Template Driven Form</h1>
+<div class="col-sm-6">
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" ngModel class="form-control" name="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" ngModel name="exampleInputPassword1" placeholder="Password">
+  </div>
+ 
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form></div>
