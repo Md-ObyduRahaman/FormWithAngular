@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { from } from 'rxjs';
+import {FormControl,FormGroup,Validators} from '@angular/forms'
 
 @Component({
   selector: 'app-root',
@@ -6,9 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bootstrap';
-  onSubmit(data: string)
+  title = 'BootstrapForm';
+  loginForm=new FormGroup({
+    email:new FormControl('',Validators.required),
+    password:new FormControl('')
+  })
+  get email()
   {
-    console.warn(data);
+    return this.loginForm.get('email')
   }
 }
