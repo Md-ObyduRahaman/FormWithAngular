@@ -9,12 +9,8 @@ import {FormControl,FormGroup,Validators} from '@angular/forms'
 })
 export class AppComponent {
   title = 'BootstrapForm';
-  loginForm=new FormGroup({
-    email:new FormControl('',Validators.required),
-    password:new FormControl('')
-  })
-  get email()
+  onSubmit(data: any)
   {
-    return this.loginForm.get('email')
+    console.warn(data);
   }
 }
