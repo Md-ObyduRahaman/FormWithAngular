@@ -13,4 +13,10 @@ export class AppComponent {
   {
     console.warn(data);
   }
+  userData={
+    email:"sojib@gmail.com",
+    password: "123jiggf",
+    address:"Mymensingh",
+    mobile:"0178237837"
+  }
 }

@@ -3,22 +3,22 @@
 <form #userForm="ngForm" (ngsubmit)="onSubmit(userForm.value)">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input name="useremail" ngModel #email="ngModel" email required  type="email"  class="form-control"  placeholder="Enter email">
+    <input name="useremail" [ngModel]="userData.email" #email="ngModel" email required  type="email"  class="form-control"  placeholder="Enter email">
     <span *ngIf="email.invalid && email.touched" class="error">Email is  not valid</span>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input #password="ngModel" ngModel required maxlength="10" minlength="5" name="password" ngModel type="password" class="form-control"  placeholder="Password">
+    <input #password="ngModel" [ngModel]="userData.password" required maxlength="10" minlength="5" name="password" ngModel type="password" class="form-control"  placeholder="Password">
     <span *ngIf="password.invalid && password.touched" class="error">Password is not Valid</span>
   </div>
   <div class="form-group">
     <label >Mobile</label>
-    <input name="mobile" minlength="8" maxlength="12" #mobile="ngModel" ngModel type="text" class="form-control"  placeholder="Mobile">
+    <input name="mobile" minlength="8" maxlength="12" [ngModel]="userData.mobile" #mobile="ngModel" ngModel type="text" class="form-control"  placeholder="Mobile">
     <span *ngIf="mobile.invalid && mobile.touched" class="error">Mobile Number is not Valid</span>
   </div>
   <div class="form-group">
     <label >Address</label>
-    <input name="address" pattern="[a-zA-Z]*"  #address="ngModel" ngModel type="text" class="form-control"  placeholder="Address">
+    <input name="address" pattern="[a-zA-Z]*"  #address="ngModel" [ngModel]="userData.address" type="text" class="form-control"  placeholder="Address">
     <span *ngIf="address.invalid && address.touched" class="error">Address is not Valid</span>
   </div>
  
